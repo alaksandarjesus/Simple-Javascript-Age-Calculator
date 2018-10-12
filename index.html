@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>Age Calculator</title>
+    <style>
+        #age-calculator-card-wrapper{
+            height: 100vh;
+        }
+        #age-calculator-card-wrapper .card{
+            width: 450px;
+        }
+        #age-calculator-card-wrapper .card .card-header,
+        #age-calculator-card-wrapper .card .card-footer{
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="d-flex justify-content-center align-items-center flex-column" id="age-calculator-card-wrapper">
+                        <div id="result" style="display:none">
+                                <strong>The difference between <span id="begin" class="text-primary"></span> and <span id="end" class="text-primary"></span> is <span id="years" class="text-danger"></span> Years, <span id="months" class="text-danger"></span> Months, <span id="days" class="text-danger"></span> Days</strong>
+                        </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title mb-0">Birth Date Calculator</h4>
+                        </div>
+                        <div class="card-body">
+                            <form onsubmit="return false;">
+                                <div class="form-group row">
+                                    <label for="dateFormat" class="col-sm-4 col-form-label">Date format</label>
+                                    <div class="col-sm-8">
+                                        <select name="" id="dateFormat" class="form-control">
+                                            <option value="DD-MM-YYYY" data-datepicker-format="dd-mm-yy" selected>DD-MM-YYYY</option>
+                                            <option value="MM-DD-YYYY" data-datepicker-format="mm-dd-yy">MM-DD-YYYY</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="startDate" class="col-sm-4 col-form-label">Start Date</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="startDate" placeholder="Enter Date of birth or Start Date">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="targetDate" class="col-sm-4 col-form-label">Target Date</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="targetDate" placeholder="Enter a target date">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-primary btn-md float-right" type="button" id="calculate">Calculate</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js"></script>
+    <script src="age-calculator.js"></script>
+</body>
+
+</html>
